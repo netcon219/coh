@@ -1,0 +1,22 @@
+title: "Your Site Name"
+description: "A minimal, privacy-focused site"
+
+url: ""
+baseurl: ""
+
+markdown: kramdown
+permalink: pretty
+
+collections:
+  section-one:
+    output: true
+    permalink: /section-one/:name/
+  section-two:
+    output: true
+    permalink: /section-two/:name/
+  section-three:
+    output: true
+    permalink: /section-three/:name/
+
+exclude:
+  - README.md
