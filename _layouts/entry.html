@@ -1,0 +1,13 @@
+<article class="entry">
+<h2>{{ page.title }}</h2>
+{{ content }}
+
+
+{% if page.tags %}
+<p class="tags">
+{% for tag in page.tags %}
+<a href="{{ site.baseurl }}/tags/#{{ tag }}">#{{ tag }}</a>
+{% endfor %}
+</p>
+{% endif %}
+</article>

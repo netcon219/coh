@@ -1,0 +1,27 @@
+{% raw %}
+<h2>{{ page.title }}</h2>
+
+
+{% assign all_items = site.section-one | concat: site.section-two | concat: site.section-three %}
+
+
+{% if page.section %}
+{% assign all_items = all_items | where: "collection", page.section %}
+{% endif %}
+
+
+{% assign all_items = all_items | sort: "date" | reverse %}
+
+
+{% for item in all_items %}
+<article class="entry">
+<h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
+<p>{{ item.excerpt }}</p>
+<p class="tags">
+{% for tag in item.tags %}
+<a href="{{ site.baseurl }}/tags/#{{ tag }}">#{{ tag }}</a>
+{% endfor %}
+</p>
+</article>
+{% endfor %}
+{% endraw %}

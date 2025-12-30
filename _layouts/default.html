@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>{{ page.title }} · {{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}" />
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css" />
+
+  <style>
+    body {
+      background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url('{{ site.baseurl }}{{ page.background | default: "/assets/img/bg-default.jpg" }}')
+        no-repeat center center fixed;
+      background-size: cover;
+    }
+  </style>
+</head>
+<body>
+  {% include header.html %}
+
+  <main class="content">
+    {{ content }}
+  </main>
+
+  {% include footer.html %}
+</body>
+</html>
