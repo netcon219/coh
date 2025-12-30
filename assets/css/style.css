@@ -1,0 +1,121 @@
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("../fonts/SourceSerif4-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("../fonts/SourceSerif4-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Source Serif 4", Charter, Georgia, serif;
+  font-size: 18px;
+  line-height: 1.65;
+  color: #f2f2f2;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.wrap,
+.content {
+  max-width: 720px;          /* narrower = better reading */
+  margin: 0 auto;
+  padding: 2rem 1.25rem;     /* calmer rhythm */
+}
+
+/* Basic text rhythm */
+p { margin: 0 0 1.25rem 0; }
+
+h1, h2, h3 {
+  font-weight: 400;
+  line-height: 1.25;
+  margin: 0 0 1rem 0;
+}
+
+h1 { font-size: 2rem; margin-bottom: 1.25rem; }
+h2 { font-size: 1.6rem; margin-bottom: 1rem; }
+h3 { font-size: 1.25rem; margin-bottom: 0.75rem; }
+
+a {
+  color: #b7d4ff;
+  text-decoration: none;
+}
+
+a:hover { text-decoration: underline; }
+
+/* Header / nav */
+.site-header {
+  background: rgba(0,0,0,0.5);
+}
+
+.site-title {
+  margin: 0 0 0.75rem 0;
+  font-weight: 400;
+}
+
+.site-title a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+nav a:hover { color: #fff; }
+
+.header-inner {
+  padding: 1.25rem 0 1rem 0;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1rem;   /* row gap, column gap */
+}
+
+.site-nav a {
+  margin-right: 0;   /* handled by gap now */
+  padding: 0.1rem 0;
+}
+
+/* Entry “card” (subtle, not shouty) */
+.entry {
+  background: rgba(0,0,0,0.45);
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2.5rem;
+}
+
+/* Tags */
+.tags {
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+.tags a {
+  margin-right: 0.6rem;
+  color: #9ecbff;
+  text-decoration: none;
+}
+
+.tags a:hover { text-decoration: underline; }
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.75;
+  padding: 2rem 1rem;
+}
